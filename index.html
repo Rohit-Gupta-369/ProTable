@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="proScoreCalculator" class="calculator-container">
+        <div class="container">
+            <button class="change">Switch to Marks Calculator</button>
+            <h1>Pro Score Calculator</h1>
+            <h3>Desired Marks: From 40 to 100</h3>
+            <form id="pro-score-form">
+                <div class="form-group">
+                    <label for="desired-marks">Desired Marks:</label>
+                    <input type="number" id="desired-marks" name="desired-marks" min="40" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="number-of-pros">Number of Pros:</label>
+                    <input type="number" id="number-of-pros" name="number-of-pros" min="1" max="5" required>
+                </div>
+                <button type="submit">Calculate Pro Score</button>
+            </form>
+            <div id="pro-result-container" class="hidden">
+                <div id="pro-cal"></div>
+                <div id="pro-table-wrapper"></div>
+                <div id="pro-marks"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="marksCalculator" class="calculator-container hidden">
+        <div class="container">
+            <button class="change">Switch to Pro Score Calculator</button>
+            <h1>Marks Calculator</h1>
+            <form id="score-form">
+                <div class="form-group">
+                    <label for="number-of-pro">Number of Pros:</label>
+                    <input type="number" id="number-of-pro" name="number-of-pro" min="1" max="10" required>
+                </div>
+                <button type="submit">Generate Table</button>
+            </form>
+            <div id="result-container" class="hidden">
+                <table id="pros-table">
+                    <thead>
+                        <tr>
+                            <th>Pro</th>
+                            <th>Weight</th>
+                            <th>Points</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pros-table-body"></tbody>
+                </table>
+                <button id="calculate" type="submit">Calculate Marks</button>
+                <div id="marks"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+</html>
