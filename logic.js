@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
           max = 2.1;
           decimalPlaces = 0;
         } else if (desiredMarks == 50) {
-          min = 2.2;
+          min = 2.5;
           max = 2.6;
           decimalPlaces = 1;
         } else if (desiredMarks == 60) {
@@ -127,8 +127,10 @@ document.addEventListener("DOMContentLoaded", () => {
         decimalPlaces = 1;
       }
 
-      for (i = 0; i < numberOfPros; i++) {
-        pros2.push(getpros(min, max, decimalPlaces));
+      if (min > 0){
+        for (i = 0; i < numberOfPros; i++) {
+          pros2.push(getpros(min, max, decimalPlaces));
+        }
       }
 
       for (i = 0; i < numberOfPros; i++) {
