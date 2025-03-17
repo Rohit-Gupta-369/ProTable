@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
           max = 2.1;
           decimalPlaces = 0;
         } else if (desiredMarks == 50) {
-          min = 2;
+          min = 2.2;
           max = 2.6;
           decimalPlaces = 1;
         } else if (desiredMarks == 60) {
@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           // getdata();
           setTimeout(getdata, 1);
-          console.log();
+          console.log(1);
         }
       } else {
         console.log("System Doesnot contain More then 5 pros");
