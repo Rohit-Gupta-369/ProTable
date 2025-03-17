@@ -39,7 +39,37 @@ document.addEventListener("DOMContentLoaded", () => {
         let power = Math.pow(10, decimalPlaces);
         return Math.floor(pro1 * power) / power;
       }
-      if (desiredMarks > 98) {
+      if ( desiredMarks % 10 == 0) {
+        if (desiredMarks == 40) {
+          min = 2;
+          max = 2.1;
+          decimalPlaces = 0;
+        } else if (desiredMarks == 50) {
+          min = 2;
+          max = 2.6;
+          decimalPlaces = 1;
+        } else if (desiredMarks == 60) {
+          min = 2.9;
+          max = 3.1;
+          decimalPlaces = 0;
+        } else if (desiredMarks == 70) {
+          min = 3.4;
+          max = 3.8;
+          decimalPlaces = 1;
+        } else if (desiredMarks == 80) {
+          min = 3.9;
+          max = 4.1;
+          decimalPlaces = 0;
+        } else if (desiredMarks == 90) {
+          min = 4.2;
+          max = 4.8;
+          decimalPlaces = 1;
+        } else if (desiredMarks == 100) {
+          min = 4.8;
+          max = 5.2;
+          decimalPlaces = 0;
+        }
+      } else if (desiredMarks > 98) {
         min = 4.9;
         max = 5.1;
         decimalPlaces = 1;
