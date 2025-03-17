@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
           decimalPlaces = 0;
         } else if (desiredMarks == 50) {
           min = 2.5;
-          max = 2.6;
+          max = 2.5;
           decimalPlaces = 1;
         } else if (desiredMarks == 60) {
           min = 2.9;
