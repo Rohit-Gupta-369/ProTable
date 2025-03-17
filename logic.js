@@ -5,14 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const proResultContainer = document.getElementById("pro-result-container");
   const proTableWrapper = document.getElementById("pro-table-wrapper");
   const proMarks = document.getElementById("pro-marks");
-  const marksScoreForm = document.getElementById("marks-score-form");
-  const marksResultContainer = document.getElementById(
-    "marks-result-container"
-  );
-  const prosTableBody = document.getElementById("pros-table-body");
-  const marksDisplay = document.getElementById("marks");
 
-  // Event listener for Pro Score Calculator form submission
+  const prosTableBody = document.getElementById("pros-table-body");
+
   proScoreForm.addEventListener("submit", (event) => {
     event.preventDefault();
     proTableWrapper.innerHTML = "";
@@ -22,15 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const numberOfPros = parseInt(
       document.getElementById("number-of-pros").value
     );
-    const calcu = document.getElementById("pro-cal");
 
-    // Perform calculations and display results for Pro Score Calculator
     calculateProScores(desiredMarks, numberOfPros);
     proResultContainer.classList.remove("hidden");
   });
 
  
-  // Function to calculate and display results for Pro Score Calculator
   function calculateProScores(desiredMarks, numberOfPros) {
     const calcu = document.getElementById("pro-cal");
     prosTableBody.innerHTML = "";
@@ -38,8 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     getdata();
 
     function getdata() {
-      // const result = document.getElementById("result").value;
-      // const noofpros = document.getElementById("noofpros").value;
       let pros2 = [];
       let sum = [];
       sum = 0;
@@ -118,8 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
       tempsum = sum;
       sum = sum * (20 / (numberOfPros * 20));
 
-      // return sum;
-      // console.log(parseInt(sum));
       let resulted_5 = [
         95, 97, 91, 99, 81, 93, 83, 85, 89, 87, 77, 79, 75, 71, 73, 65, 61, 63,
         67, 69, 51, 53, 55, 57, 59, 41, 43, 45, 47, 49,
@@ -168,7 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
           `;
             proTableWrapper.insertAdjacentHTML("beforeend", row);
 
-            // console.log("Pro", j + 1, "--", pros2[j], " sum : ", pros2[j] * 20);
             j++;
           }
           earnedPoints = earnedPoints / numberOfPros;
@@ -185,9 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <h4>Marks in 100 :<span> ${desiredMarks}</span></h4>
           </div>
         </div>`;
-          // console.log("Total Sum :", tempsum);
-          // console.log("Earned Points : ", earnedPoints);
-          // console.log("desiredMarks", desiredMarks);
           return 0;
         } else {
           // getdata();
